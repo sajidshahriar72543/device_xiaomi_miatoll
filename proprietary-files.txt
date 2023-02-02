@@ -1122,6 +1122,13 @@ vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/sensors.ssc.so
 
+# Soundtrigger
+vendor/lib/hw/android.hardware.soundtrigger@2.1-impl.so|ad7cdf984a62fadeab36058b8b7096308efb9e43
+vendor/lib/hw/android.hardware.soundtrigger@2.2-impl.so|3487ed64724e9551d9ae89a2e387b69d2e2c4a5e
+vendor/lib/hw/sound_trigger.primary.atoll.so|7e26c38cbf8efd2358ac7746c7e5ff6e775b1284
+vendor/lib64/hw/android.hardware.soundtrigger@2.2-impl.so|2ddd060c8457d745f792a6eb634376c1812213dd
+vendor/lib64/hw/sound_trigger.primary.atoll.so|fabc6c87287852c528f0069f9d3c52bfa19c89af
+
 # Thermal engine - from sunfish - RQ3A.210805.001.A1/7474174
 vendor/bin/thermal-engine|549f8284d4aca92e2b8187ab2a283a90c40e6dca
 
