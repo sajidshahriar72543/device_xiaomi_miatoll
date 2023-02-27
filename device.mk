@@ -260,6 +260,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
 PRODUCT_PACKAGES += \
+    ApertureOverlay \
     CarrierConfigResCommon \
     SM6250Frameworks \
     SM6250SystemUI \
