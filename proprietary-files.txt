@@ -59,7 +59,6 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib/rfsa/adsp/misound_res.bin
 vendor/lib/rfsa/adsp/tas25xx_TI_0.bin
 
 # Alarm
@@ -69,6 +68,13 @@ vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
+# ADSP Modules (Misound) - from sweet V14.0.2.0.TKFEUXM
+vendor/lib/rfsa/adsp/misound_karaokemix_res.bin|bd7aa75d2f402e08f8d951f80d05c045e292a593
+vendor/lib/rfsa/adsp/misound_karaoke_res.bin|bd7aa75d2f402e08f8d951f80d05c045e292a593
+vendor/lib/rfsa/adsp/misound_res.bin|d08fb852de9a354f60c18cd5186d2e1cdbbd2ad4
+vendor/lib/rfsa/adsp/misound_res_headphone.bin|32133fcbb9464169dd3d58f045e161b54f6afa9d
+vendor/lib/rfsa/adsp/misound_res_spk.bin|2a9b899d2a57d9f2f13414e8a46eaef55e6f01ec
 
 # Audio
 vendor/lib/btaudio_offload_if.so
@@ -93,6 +99,9 @@ vendor/etc/mixer_paths_wcd937x.xml
 # Audio FX modules
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libshoebox.so
+
+# Audio FX modules (Misound) - from sweet V14.0.2.0.TKFEUXM
+vendor/lib/soundfx/libmisoundfx.so|6110af80c61b87447611bde1e30ef3e0f44648b2
 
 # Battery
 vendor/bin/batterysecret
