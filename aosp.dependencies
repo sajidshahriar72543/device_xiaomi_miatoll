@@ -22,11 +22,5 @@
     "target_path": "vendor/xiaomi/miatoll-fw",
     "branch": "thirteen",
     "remote": "pixel-devices-blobs"
-  },
-  {
-    "repository": "vendor_xiaomi_miatoll-gcam",
-    "target_path": "vendor/xiaomi/miatoll-gcam",
-    "branch": "thirteen",
-    "remote": "pixel-devices-blobs"
   }
 ]
