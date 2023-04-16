@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Ambient settings -->
-    <string name="ambient_enable">アンビエント表示</string>
 
     <!-- Dirac settings -->
     <string name="dirac_enable">Mi サウンドエンハンサー</string>

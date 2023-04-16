@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Ambient settings -->
-    <string name="ambient_enable">Hiển thị môi trường xung quanh</string>
 
     <!-- Dirac settings -->
     <string name="dirac_enable">Sử dụng Bộ tăng cường Âm thanh Mi</string>

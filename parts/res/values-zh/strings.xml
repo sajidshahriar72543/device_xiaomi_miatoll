@@ -15,8 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Ambient settings -->
-    <string name="ambient_enable">环境显示</string>
 
     <!-- Dirac settings -->
     <string name="dirac_enable">使用米音提升音质</string>
