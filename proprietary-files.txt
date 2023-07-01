@@ -298,6 +298,11 @@ vendor/etc/camera/watermark_font_2300_3199.dat
 vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/osc_rtp_24K_5s.bin
 
+# Camera (Megvii)
+vendor/etc/camera/megviifacepp_0_5_2_model|a2b8751f04d94f0634453c40426e66b0a1283da1
+vendor/lib64/libMegviiFacepp-0.5.2.so|a439145c3700d62446af21fe385775e6d5cb1a9a
+vendor/lib64/libmegface.so|8f67d986f23a110e48a2c6c57024ac3dee4993aa
+
 # Camera (sensors)
 vendor/lib64/camera/com.qti.eeprom.sunny_gc8034.so
 vendor/lib64/camera/com.qti.sensor.curtana_gc02m1.so
