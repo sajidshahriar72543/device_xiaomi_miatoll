@@ -570,7 +570,7 @@
         <item>com.android.camera</item>
         <item>org.lineageos.aperture</item>
         <item>org.lineageos.aperture.dev</item>
-        <item>org.pixelexperience.faceunlock</item>
+        <item>co.aospa.sense</item>
     </string-array>
 
     <!-- Auto-brightness sensor type string -->
