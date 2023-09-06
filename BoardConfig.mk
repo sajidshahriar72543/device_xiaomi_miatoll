@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/miatoll
+KERNEL_PATH := $(DEVICE_PATH)-kernel
 
 BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
@@ -83,21 +84,24 @@ TARGET_RECOVERY_DEVICE_MODULES ?= init_xiaomi_miatoll
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
+# Workaround to make lineage's soong generator work
+TARGET_KERNEL_SOURCE := $(KERNEL_PATH)/kernel-headers
+
+# Kill lineage kernel build task while preserving kernel
+TARGET_NO_KERNEL_OVERRIDE := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
+BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)-kernel
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_RAMDISK_USE_LZ4 := true
-
-TARGET_KERNEL_ADDITIONAL_FLAGS += LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump
-TARGET_KERNEL_CONFIG := vendor/xiaomi/miatoll_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6250
-KERNEL_CC := CC=clang
 
 BOARD_KERNEL_CMDLINE += androidboot.fstab_suffix=qcom
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom

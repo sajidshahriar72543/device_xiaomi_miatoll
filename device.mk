@@ -141,6 +141,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
 
+# Kernel
+PRODUCT_COPY_FILES += \
+    device/xiaomi/miatoll-kernel/Image.gz:kernel
+
 # Libshims
 PRODUCT_PACKAGES += \
     fakelogprint
