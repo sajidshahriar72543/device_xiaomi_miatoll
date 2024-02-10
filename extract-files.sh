@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Copyright (C) 2021 The LineageOS Project
+# Copyright (C) 2021 The ArrowOS
 #
 # SPDX-License-Identifier: Apache-2.0
 #
