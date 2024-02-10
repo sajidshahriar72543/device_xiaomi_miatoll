@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2022 The LineageOS Project
+# Copyright (C) 2021-2022 Project Awaken
 #
 # SPDX-License-Identifier: Apache-2.0
 #
