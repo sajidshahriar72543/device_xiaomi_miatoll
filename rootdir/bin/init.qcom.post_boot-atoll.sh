@@ -90,26 +90,14 @@ function configure_memory_parameters() {
 	configure_zram_parameters
 }
 
-# Core control parameters on silver
-echo 0 0 0 0 1 1 > /sys/devices/system/cpu/cpu0/core_ctl/not_preferred
-echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
-echo 60 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
-echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
-echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
-echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
-echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
-
 # Setting b.L scheduler parameters
-# default sched up and down migrate values are 95 and 85
-echo 65 > /proc/sys/kernel/sched_downmigrate
-echo 71 > /proc/sys/kernel/sched_upmigrate
-# default sched up and down migrate values are 100 and 95
-echo 85 > /proc/sys/kernel/sched_group_downmigrate
-echo 100 > /proc/sys/kernel/sched_group_upmigrate
-echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
+echo 25 > /proc/sys/kernel/sched_downmigrate_boosted
+echo 25 > /proc/sys/kernel/sched_upmigrate_boosted
+echo 95 > /proc/sys/kernel/sched_upmigrate
+echo 85 > /proc/sys/kernel/sched_downmigrate
 
-#colocation v3 settings
-echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
+# Enable EAS
+echo 1 > /proc/sys/kernel/sched_energy_aware
 
 # configure governor settings for little cluster
 echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -129,9 +117,6 @@ echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
 echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
 echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
 echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
-
-echo "0:1248000" > /sys/module/cpu_boost/parameters/input_boost_freq
-echo 40 > /sys/module/cpu_boost/parameters/input_boost_ms
 
 # Enable bus-dcvs
 for device in /sys/devices/platform/soc
@@ -224,10 +209,7 @@ echo 0 > /dev/stune/foreground/schedtune.boost
 echo 0 > /dev/stune/schedtune.prefer_idle
 echo 0 > /dev/stune/schedtune.boost
 echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-echo 1 > /dev/stune/top-app/schedtune.boost
-
-# Turn off scheduler boost at the end
-echo 0 > /proc/sys/kernel/sched_boost
+echo 10 > /dev/stune/top-app/schedtune.boost
 
 # Turn on sleep modes
 echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
