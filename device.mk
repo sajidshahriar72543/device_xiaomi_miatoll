@@ -162,6 +162,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libhwbinder.vendor
 
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0.vendor \
+    android.hidl.manager@1.0.vendor \
+    android.hidl.memory@1.0.vendor \
+    android.hidl.memory.block@1.0.vendor
+
 # HotwordEnrollement app permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
