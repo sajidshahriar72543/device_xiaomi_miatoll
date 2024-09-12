@@ -200,17 +200,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fakelogprint
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 TARGET_DISABLE_C2_CODEC := false
@@ -286,10 +278,6 @@ PRODUCT_PACKAGES += \
     SM6250SystemUI \
     TelephonyResCommon \
     WifiOverlay
-
-PRODUCT_PACKAGES += \
-    SM6250LineageDialer \
-    SM6250LineageSDK
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
