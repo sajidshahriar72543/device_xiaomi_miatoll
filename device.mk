@@ -161,7 +161,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    libutils.vendor
 
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0.vendor \
