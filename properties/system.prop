@@ -5,9 +5,6 @@ vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
 # Camera
 persist.sys.cam.skip_detach_image=true
 
-# Charger
-ro.charger.enable_suspend=true
-
 # CNE
 persist.vendor.cne.feature=1
 
