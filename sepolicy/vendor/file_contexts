@@ -15,7 +15,9 @@
 /data/vendor/fpc(/.*)?                                                        u:object_r:fingerprint_vendor_data_file:s0
 
 # IR
-/dev/spidev0.1                                                                u:object_r:lirc_device:s0
+/dev/ir_spi                                                                   u:object_r:lirc_device:s0
+/dev/lirc[0-9]                                                                u:object_r:lirc_device:s0
+/dev/spidev[0-9]\.1                                                           u:object_r:lirc_device:s0
 
 # Lights
 /vendor/bin/hw/android\.hardware\.light-service\.xiaomi                       u:object_r:hal_light_default_exec:s0
