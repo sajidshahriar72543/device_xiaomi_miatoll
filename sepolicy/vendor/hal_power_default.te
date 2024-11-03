@@ -1,3 +1,27 @@
-# Allow writing to files in /sys/touchpanel
-allow hal_power_default sysfs_touchpanel:dir search;
-allow hal_power_default sysfs_touchpanel:file rw_file_perms;
+allow hal_power_default {
+  cgroup
+  vendor_sysfs_devfreq
+  sysfs_touchpanel
+}:dir search;
+
+allow hal_power_default {
+  cgroup
+  vendor_sysfs_devfreq
+  sysfs_devices_system_cpu
+  vendor_sysfs_graphics
+  vendor_sysfs_kgsl
+  sysfs_touchpanel
+  vendor_sysfs_scsi_host 
+}:file rw_file_perms;
+
+# Allow reading proc files for CPU statistics.
+allow hal_power_default proc_stat:file r_file_perms;
+allow hal_power_default proc_vendor_sched:dir r_dir_perms;
+allow hal_power_default proc_vendor_sched:file r_file_perms;
+
+allow hal_power_default latency_device:chr_file rw_file_perms;
+
+# To get/set powerhal state property
+set_prop(hal_power_default, vendor_power_prop)
+
+typeattribute hal_power_default mlstrustedsubject;
