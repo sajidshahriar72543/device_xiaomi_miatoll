@@ -120,6 +120,7 @@ vendor/lib/libbluetooth_audio_session_qti.so
 vendor/lib/libbluetooth_audio_session_qti_2_1.so
 
 # Camera
+vendor/lib/libcamera_nn_stub.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so;DISABLE_CHECKELF
 vendor/lib64/libFaceGrade.so
@@ -397,6 +398,7 @@ vendor/lib64/vendor.qti.hardware.camera.device@3.5.so
 # CDSP - from sweet
 vendor/bin/cdsprpcd|530bcfcf9a31dedcc6c8ff5ea33fbaf8c03ab877
 vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
+vendor/lib/libcdsprpc.so|47ae360d2587262b75d977a6af1189e75411cc6a
 vendor/lib64/libcdsp_default_listener.so|81e5f4737bfb7e2f0a906183b2a8357a5053ee5c
 vendor/lib64/libcdsprpc.so|08cde5e7a6c66078f9253ab84fb35012383c4969
 
@@ -560,6 +562,7 @@ vendor/lib64/libwvhidl.so
 vendor/bin/dspservice|a7344fc3d27a49df30858ebc3f73ee5818e752d4
 vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
 vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
+vendor/lib/vendor.qti.hardware.dsp@1.0.so|8fcb647d22144c0ce005eae37e05e786d2b045be
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
 
 # Fingerprint
@@ -1160,6 +1163,7 @@ vendor/etc/sensors/config/sns_tilt_to_wake.json
 vendor/etc/sensors/config/sns_wrist_pedo.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
+vendor/lib/libsnsapi.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsapi.so
@@ -1211,7 +1215,7 @@ system_ext/lib64/libwfdmmsink.so|8150b750357b606475521b491f78d566673f9888
 system_ext/lib64/libwfdmmsrc_system.so|658823365c8c7ffeca808b0dd570380b415ea658
 system_ext/lib64/libwfdnative.so|65003ac0b210da5f99dc5329b6dcdb00ea98b451
 system_ext/lib64/libwfdrtsp.so|8181e44d7c1f722218fabd8fe3bf788454a3f586
-system_ext/lib64/libwfdservice.so|6cd2415c4e9dba495269c8652a7b1d803018bc60
+system_ext/lib64/libwfdservice.so|9e84589b2f7f83aa03b9d61d677061195a9900eb
 system_ext/lib64/libwfdsinksm.so|c4d68ecbe0accd24296c18444e5a82b6a24be8d8
 system_ext/lib64/libwfduibcinterface.so|dca32fe063bdba7ce3b131b16cf112b793ae03ad
 system_ext/lib64/libwfduibcsink.so|63ea93b1a6aec75a294baf50007270807a819e21
