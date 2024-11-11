@@ -60,8 +60,5 @@
 /vendor/bin/hw/android\.hardware\.sensors-service\.xiaomi-multihal            u:object_r:hal_sensors_default_exec:s0
 /vendor/bin/init\.sensors_fixup\.sh                                           u:object_r:vendor_init-qcom-sensors-sh_exec:s0
 
-# Thermal
-/vendor/bin/hw/android\.hardware\.thermal@2\.0-service\.mock                  u:object_r:hal_thermal_default_exec:s0
-
 # Time
 /vendor/bin/timekeep                                                          u:object_r:timekeep_exec:s0

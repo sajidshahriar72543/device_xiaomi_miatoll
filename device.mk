@@ -339,7 +339,7 @@ PRODUCT_BOOT_JARS += \
 
 # Thermal HAL
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.mock
+    android.hardware.thermal-service.qti
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-curtana.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-curtana.conf \
