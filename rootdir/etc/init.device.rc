@@ -11,12 +11,6 @@ service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc-service.nxp
     group nfc drmrpc system
     disabled
 
-on early-init && property:ro.boot.lcmtype=dsi_nt36672c_huaxing_fhd_video_display
-    setprop persist.vendor.fingerprint.sensor_location 1080|760|100|local:4630946580317548417
-
-on early-init && property:ro.boot.lcmtype=dsi_nt36672c_tianma_fhd_video_display
-    setprop persist.vendor.fingerprint.sensor_location 1080|760|100|local:4630947024726438529
-
 on early-init && property:ro.boot.hwname=joyeuse
     setprop ro.boot.product.hardware.sku nfc
 
