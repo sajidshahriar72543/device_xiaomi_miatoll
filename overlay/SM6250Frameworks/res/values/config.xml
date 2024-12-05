@@ -628,4 +628,7 @@
     <!-- Whether to play turbulence noise after clicking the play button -->
     <bool name="config_turbulenceNoise">false</bool>
 
+    <!-- Device model (Build.MODEL) to spoof for netflix, if not empty -->
+    <string name="config_netflixSpoofModel" translatable="false">24030PN60G</string>
+
 </resources>
