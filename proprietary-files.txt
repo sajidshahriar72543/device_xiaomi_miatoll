@@ -421,7 +421,7 @@ system_ext/lib64/vendor.qti.hardware.data.iwlan@1.0.so|60b47bd64df15c77784b6d04c
 system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so|dde74c936902a8497ef70e6f94c326775a44bf3e
 
 # CNE (vendor) - from sweet
-vendor/app/CneApp/CneApp.apk|b7ff9a18c255a569431034ddd93624d8e46800ed
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink|b7ff9a18c255a569431034ddd93624d8e46800ed
 vendor/app/IWlanService/IWlanService.apk|8f2331efbc912d22c0abdb4bf8f298fded1006c2
 vendor/bin/cnd|51189ff870b277e4899426262a39d56149668e54
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
