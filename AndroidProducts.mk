@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixelage_miatoll.mk
+    $(LOCAL_DIR)/statix_miatoll.mk
 
 COMMON_LUNCH_CHOICES := \
-    pixelage_miatoll-user \
-    pixelage_miatoll-userdebug \
-    pixelage_miatoll-eng
+    statix_miatoll-ap4a-user \
+    statix_miatoll-ap4a-userdebug \
+    statix_miatoll-ap4a-eng
